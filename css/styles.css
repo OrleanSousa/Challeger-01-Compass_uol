@@ -31,4 +31,53 @@ header{
     font-size: 16px;
     border-radius: 10px;
     font-weight: 400;
+    border: none;
+}
+
+main {
+    background-color: #7A1745;
+    display: flex;   
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: column;
+    height: 216px;
+    width: 500px;
+    gap: 24px;
+    margin-left: 170px;
+    margin-right: 60px;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.container-text h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+.container-text h1 span{
+    color: #FCF4B6;
+}
+.container-text p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.container-text button{
+    width: 240px;
+    height: 48px;
+    background-color: #CB4F57;
+    color: #FCF4B6;
+    gap: 24px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+
+.container{
+    margin: 30px 0px 30px 0px;
 }
