@@ -11,7 +11,6 @@ header{
     background-color: #331436;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
 }
 #title_header{
@@ -264,6 +263,44 @@ footer{
 
 #section_login{
     height: 58vh;
+}
+
+/* kaban */
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    text-align: start;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding-right: 40px;
+    
 }
 
 
