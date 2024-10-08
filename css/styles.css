@@ -243,3 +243,18 @@ form{
     font-weight: bold;
     font-size: 14px;
 }
+
+footer{
+    background-color: #331436;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px;
+    align-items: center;
+    grid-row: auto;
+}
+
+.text_footer{
+    display: flex;
+    color: #FFFFFF;
+    gap: 50px;
+}
