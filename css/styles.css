@@ -32,6 +32,7 @@ header{
     border-radius: 10px;
     font-weight: 400;
     border: none;
+    cursor: pointer;
 }
 
 main {
@@ -78,6 +79,7 @@ main img{
     gap: 24px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .container{
@@ -119,6 +121,7 @@ main img{
     color: #ffffff;
     background-color: #331436;
     padding: 12px;
+    cursor: pointer;
 }
 
 
@@ -172,16 +175,7 @@ main img{
     color: #331436;
     margin-bottom: 24px;    
 }
-#container_3 button{  
-    width: 240px;
-    height: 48px;
-    background-color: #331436;
-    color: #FFFFFF;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
-}
+/*  */
 
 #list_iframe{  
   display: flex;
@@ -203,7 +197,7 @@ main img{
 .container_iframe .sub {
     font-size: 16px;
 }
-#section_4{
+#section_4, #section_login{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -230,7 +224,7 @@ form{
     margin-bottom: 40px; 
 }
 
-#email, #name{
+#email, #name, #password{
     height: 36px;
     border-radius: 10px;
     border: solid 1px #000;
@@ -258,3 +252,18 @@ footer{
     color: #FFFFFF;
     gap: 50px;
 }
+
+
+/* login */
+
+#main_login {  
+    justify-content: space-between ;
+    height: 70vh;
+    
+}
+
+#section_login{
+    height: 65vh;
+}
+
+
