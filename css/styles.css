@@ -109,7 +109,8 @@ main img{
 #container_2 p{
     font-size: 16px;
 }
-#container_2 button{
+
+.buttons_same{
     width: 240px;
     height: 48px;
     border-radius: 10px;
@@ -120,9 +121,7 @@ main img{
     padding: 12px;
 }
 
-section{
-    display: flex;
-}
+
 
 .section_2 ul{
     margin-top: 60px;
@@ -150,14 +149,18 @@ section{
     background-color: #f5efc7;
     flex-direction: column;
     height: 552px;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    
     
 }
 
 #container_3{  
     height: 168px;
     text-align: center;
+    margin: 0 170px 0 170px;
+
 }
 
 #container_3 h2{  
@@ -178,40 +181,33 @@ section{
     border-radius: 10px;
     border: none;
     font-weight: bold;
-    
 }
-#section_3 ul{  
-  position: relative;
-  margin: 0 auto;
+
+#list_iframe{  
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style: none; 
-     
+  list-style: none;  
+  gap: 30px;
+   
 }
 
-#section_3 ul li img{
-    margin-bottom: 20px;
-    margin-right: 50px;
-    
+.container_iframe{
+    align-items: center;
+    text-align: center;
 }
 
-#section_3 ul li p{
-    color: #331436;
+.container_iframe p {
+    margin-top: 20px;
     font-size: 20px;
 }
 
-p #sub{
+.container_iframe .sub {
     font-size: 16px;
-    font-weight: 300;
 }
 
-
-
-
-
-
-
-
-
-
+.section4 h2{
+    font-size: 40px;
+    color: #331436;
+}
+.section4 p {
+    
+}
