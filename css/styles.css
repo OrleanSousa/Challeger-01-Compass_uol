@@ -203,11 +203,43 @@ main img{
 .container_iframe .sub {
     font-size: 16px;
 }
+#section_4{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 60px 170px 60px 170px;
+}
+.section4{
+    align-items: flex-start;
+    justify-content: center;
+}
 
 .section4 h2{
     font-size: 40px;
     color: #331436;
+    margin-bottom: 24px;
 }
 .section4 p {
-    
+    font-size: 16px;
+    color: #331436;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px; 
+}
+
+#email, #name{
+    height: 36px;
+    border-radius: 10px;
+    border: solid 1px #000;
+    padding: 12px;
+    width: 520px;
+}
+
+.tittle_label{
+    color: #331436;
+    font-weight: bold;
+    font-size: 14px;
 }
