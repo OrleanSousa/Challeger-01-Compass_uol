@@ -271,6 +271,11 @@ footer{
     background-color: rgba(0, 0, 0, 30%);
 }
 
+#section_kanban{
+    justify-content: space-evenly;
+    padding: 60px 170px;
+}
+
 .search-container {
     position: relative;
     display: flex;
@@ -322,25 +327,30 @@ nav a {
 
 .card_container{
     width: 200px;
-    height: 127px;
+    
 }
 
 .todo_task{
     width: 200;
     height: 130;
     border: 1px solid black;
-    border-radius: 10%;
+    border-radius: 10px;
     padding: 10px;
     background-color: #F8F2FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
     
 }
 .todo_task h3 {
     color: #331436;
     font-weight: 900;
     font-size: 12px;
+    
 }
 
-.card_header .sub_kaban{
+.card_header, .sub_kaban{
     color: #00000077;
 }
 .card_header p {
@@ -373,7 +383,6 @@ nav a {
 }
 
 .low{
-    
     background-color: #FCF4B6;
     border: solid 1px #EB9961;
     color: #CB4F57;
@@ -386,16 +395,15 @@ nav a {
 .card_footer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center;   
     justify-content: space-between;
 
 }
-.card_footer div {
-    display: flex;
-    justify-content: center;
-    
-}
 
+.card_user {
+    display: flex;
+    gap: 2px;
+}
 .user{
     display: flex;
     justify-content: center;
