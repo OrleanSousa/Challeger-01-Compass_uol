@@ -16,7 +16,7 @@
         <img src="img/logo 1.svg" alt="logo do site">
         <h2 id="title_header">Project Manager</h2>
         <nav>
-            <button id="Button-loguin">Login</button>
+            <button type="submit" id="Button-loguin">Login</button>
         </nav>
     </header>
     <main>
@@ -106,15 +106,16 @@
             <p>Stay informed with our latest updates</p>
         </div>
         <div class="container" id="form_login">
-            <form>
+            <form id="emailForm">
                 <label for="email" class="tittle_label">Email</label>
                 <input type="email" id="email" name="email" required placeholder="Enter your email"> 
-                <small>We promise not to spam</small>
+                <small id="resultMessage">We promise not to spam</small>
                 <br><br>
                 <label for="name" class="tittle_label">Name</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your name">
+                <small id="resultMessageName"></small>
+                <button class="buttons_same subscribe" id="subscribe" type="submit">Subscribe</button>
             </form>
-            <button class="buttons_same subscribe">Subscribe</button>
         </div>
     </section>
 
@@ -131,6 +132,6 @@
         </div>
     </footer>
 
-    <script src="./js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>

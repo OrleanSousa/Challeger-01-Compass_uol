@@ -19,9 +19,7 @@ header{
     align-items: start;
     flex-grow: 1;
     margin-left: 20px;
-
 }
-
 #Button-loguin{
     width: 240px;
     height: 48px;
@@ -33,7 +31,6 @@ header{
     border: none;
     cursor: pointer;
 }
-
 main {
     background-color: #7A1745;
     display: flex;   
@@ -45,7 +42,6 @@ main img{
     width: 540px;
     height: 437px;
 }
-
 .container_text{
     display: flex;
     flex-direction: column;
@@ -58,7 +54,6 @@ main img{
     color: #FFFFFF;
     margin-top: 30px;
 }
-
 .container_text h1 {
     font-weight: 700;
     font-size: 40px;
@@ -82,19 +77,16 @@ main img{
     border: none;
     cursor: pointer;
 }
-
 .section_2 {
     display: flex;
     flex-direction: column;
     margin: 60px 170px;
     align-items: center;
 }
-
 #container_2{
     text-align: start;
     width: 1100px;
 }
-
 #container_manager{
     gap: 24px;
     display: flex;
@@ -108,7 +100,6 @@ main img{
 #container_2 p{
     font-size: 16px;
 }
-
 .buttons_same{
     width: 240px;
     height: 48px;
@@ -120,9 +111,6 @@ main img{
     padding: 12px;
     cursor: pointer;
 }
-
-
-
 .section_2 ul{
     margin-top: 60px;
     display: flex;
@@ -169,24 +157,21 @@ main img{
     color: #331436;
     margin-bottom: 24px;    
 }
-/*  */
+/* sessão 3 */
 
 #list_iframe{  
   display: flex;
   list-style: none;  
   gap: 30px;
 }
-
 .container_iframe{
     align-items: center;
     text-align: center;
 }
-
 .container_iframe p {
     margin-top: 20px;
     font-size: 20px;
 }
-
 .container_iframe .sub {
     font-size: 16px;
 }
@@ -200,7 +185,6 @@ main img{
     align-items: flex-start;
     justify-content: center;
 }
-
 .section4 h2{
     font-size: 40px;
     color: #331436;
@@ -215,13 +199,11 @@ main img{
 
 form{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 .subscribe{
     margin-top: 40px;
 }
-
 #form_login form{
     display: flex;
     flex-direction: column;
@@ -229,7 +211,6 @@ form{
     gap: 4px;
     
 }
-
 #email, #name, #password{
     height: 36px;
     border-radius: 10px;
@@ -237,19 +218,16 @@ form{
     padding: 12px;
     width: 520px;
 }
-
 #email2, #password {
     color: rgb(0, 0, 0, 10%);
     margin-bottom: 40px;
 
 }
-
 .tittle_label{
     color: #331436;
     font-weight: bold;
     font-size: 14px;
 }
-
 footer{
     background-color: #331436;
     display: flex;
@@ -258,13 +236,11 @@ footer{
     align-items: center;
     grid-row: auto;
 }
-
 .text_footer{
     display: flex;
     color: #FFFFFF;
     gap: 50px;
 }
-
 
 /* login */
 
@@ -282,18 +258,15 @@ footer{
 #body_kanban{
     background-color: rgba(0, 0, 0, 10%);
 }
-
 #section_kanban{
     justify-content: space-evenly;
     padding: 60px 170px;
 }
-
 .search-container {
     position: relative;
     display: flex;
     align-items: center;
 }
-
 .search-input {
     width: 100%;
     padding: 10px;
@@ -313,14 +286,12 @@ nav {
     display: flex;
     align-items: center;
 }
-
 nav a {
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
     padding-right: 40px; 
 }
-
 
 .container_kanban {
     padding: 10px 16px;
@@ -333,12 +304,10 @@ nav a {
     gap: 10px;
     height: 627px;
 }
-
 .card_container{
     width: 200px;
     
 }
-
 .todo_task{
     width: 200;
     height: 130;
@@ -358,21 +327,18 @@ nav a {
     font-size: 12px;
     
 }
-
 .card_header, .sub_kaban{
     color: #00000077;
 }
 .card_header p {
     font-size: 10px;
 }
-
 .card_header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
 }
-
 .high{
     background-color: #CB4F57;
     border: solid 1px #7A1745;
@@ -381,7 +347,6 @@ nav a {
     font-weight: bold;
     border-radius: 50px;
 }
-
 .mid{
     background-color: #EB9961;
     border: solid 1px #CB4F57;
@@ -390,25 +355,20 @@ nav a {
     font-weight: bold;
     border-radius: 50px;
 }
-
 .low{
     background-color: #FCF4B6;
     border: solid 1px #EB9961;
     color: #CB4F57;
     padding: 5px;
     font-weight: bold;
-    border-radius: 50px;
-    
+    border-radius: 50px; 
 }
-
 .card_footer {
     display: flex;
     flex-direction: row;
     align-items: center;   
     justify-content: space-between;
-
 }
-
 .card_user {
     display: flex;
     gap: 2px;
@@ -424,7 +384,6 @@ nav a {
     font-size: 10px;
     border-radius: 50px;
 }
-
 .it {
     background-color: #801E8F;
 }
@@ -440,7 +399,3 @@ nav a {
 .gm {
     background-color: #AF4A00;
 }
-
-
-
-
