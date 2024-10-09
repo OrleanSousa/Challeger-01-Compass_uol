@@ -196,7 +196,7 @@ main img{
 .container_iframe .sub {
     font-size: 16px;
 }
-#section_4, #section_login{
+#section_4, #section_login, #section_kanban{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -267,6 +267,10 @@ footer{
 
 /* kaban */
 
+#body_kanban{
+    background-color: rgba(0, 0, 0, 30%);
+}
+
 .search-container {
     position: relative;
     display: flex;
@@ -278,7 +282,7 @@ footer{
     padding: 10px;
     padding-left: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #94949452;
     background-color: transparent;
     text-align: start;
 }
@@ -302,5 +306,50 @@ nav a {
     padding-right: 40px;
     
 }
+
+#section_kanban {
+    height: 58vh;
+    justify-content: space-around;
+}
+
+.container_kanban {
+    padding: 10px 16px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.todo_task{
+    width: 200;
+    height: 130;
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 10px;
+    background-color: #F8F2FF;
+    
+}
+.todo_task h3 {
+    color: #331436;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.card_header .sub_kaban{
+    color: #00000077;
+}
+.card_header p {
+    font-size: 10px;
+}
+
+.card_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 

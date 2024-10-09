@@ -10,7 +10,7 @@
     300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Kanban Page</title>
 </head>
-<body>
+<body id="body_kanban">
     <header>
         <img src="/img/logo 1.svg" alt="logo do site">
         <h2 id="title_header">Project Manager</h2>
@@ -26,15 +26,15 @@
         </nav>
     </header>
 
-    <section id="section_login">
-        <div>
-            <h3>To Do</h3>
+    <section id="section_kanban">
+        <div class="container_kanban">
+            <h2>To Do</h2>
             <div class="todo_task">
                 <div class="card_header">
                     <p>High</p>
-                    <p>Oct 16, 24</p>
+                    <p class="sub_kaban">Oct 16, 24</p>
                 </div>
-                <p>Creat App</p>
+                <h3>Creat App</h3>
                 <div class="card_footer">
                     <p>X</p>
                     <p>IT</p>
@@ -49,7 +49,7 @@
                     <p>Mid</p>
                     <p>Oct 09, 24</p>
                 </div>
-                <p>Train for the project</p>
+                <h3>Train for the project</h3>
                 <div class="card_footer">
                     <p>NS</p>
                     <p>GM</p>
@@ -60,20 +60,20 @@
                     <p>Low</p>
                     <p>Oct 06, 24</p>
                 </div>
-                <p>Make popcorn</p>
+                <h3>Make popcorn</h3>
                 <div class="card_footer">
                     <p>GM</p>
                 </div>
             </div>
         </div>
-        <div>
-            <h3>In Progress</h3>
+        <div class="container_kanban">
+            <h2>In Progress</h2>
             <div class="todo_task">
                 <div class="card_header">
                     <p>High</p>
                     <p>Oct 08, 24</p>
                 </div>
-                <p>Debug error</p>
+                <h3>Debug error</h3>
                 <div class="card_footer">
                     <p>X</p>
                     <p>IT</p>
@@ -84,20 +84,29 @@
                 </div>
             </div>
         </div>
-        <div>
-            <h3>Complete</h3>
+        <div class="container_kanban">
+            <h2>Complete</h2>
             <div class="todo_task">
                 <div class="card_header">
                     <p>Low</p>
                     <p>Apr 02, 21</p>
                 </div>
+                <h3>Eat a sandwich</h3>
+                <div class="card_footer">
+                    <p>X</p>
+                    <p>GM</p>
+                </div>
             </div>
             <div class="todo_task">
                 <div class="card_header">
                     <p>High</p>
-                    <p>Oct 16, 86</p>
+                    <p>Jan 28, 86</p>
                 </div>
-                
+                <h3>Drink water</h3>
+                <div class="card_footer">
+                    <p>X</p>
+                    <p>GM</p>
+                </div>
             </div>
         </div>
     </section>
