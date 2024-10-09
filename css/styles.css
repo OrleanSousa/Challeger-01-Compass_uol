@@ -39,6 +39,7 @@ main {
     display: flex;   
     align-items: center;
     justify-content: space-around;
+    padding: 30px 170px;
 }
 main img{
     width: 540px;
@@ -55,6 +56,7 @@ main img{
     margin-right: 60px;
     align-items: center;
     color: #FFFFFF;
+    margin-top: 30px;
 }
 
 .container_text h1 {
@@ -79,10 +81,6 @@ main img{
     border-radius: 10px;
     border: none;
     cursor: pointer;
-}
-
-.container{
-    margin: 30px 0px 30px 0px;
 }
 
 .section_2 {
@@ -154,15 +152,12 @@ main img{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
-    
 }
 
 #container_3{  
     height: 168px;
     text-align: center;
     margin: 0 170px 0 170px;
-
 }
 
 #container_3 h2{  
@@ -180,7 +175,6 @@ main img{
   display: flex;
   list-style: none;  
   gap: 30px;
-   
 }
 
 .container_iframe{
@@ -217,10 +211,23 @@ main img{
     color: #331436;
 }
 
+/* loguin */
+
 form{
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px; 
+    
+}
+.subscribe{
+    margin-top: 40px;
+}
+
+#form_login form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4px;
+    
 }
 
 #email, #name, #password{
@@ -229,6 +236,12 @@ form{
     border: solid 1px #000;
     padding: 12px;
     width: 520px;
+}
+
+#email2, #password {
+    color: rgb(0, 0, 0, 10%);
+    margin-bottom: 40px;
+
 }
 
 .tittle_label{
@@ -258,7 +271,6 @@ footer{
 #main_login {  
     justify-content: space-between ;
     height: 70vh;
-    
 }
 
 #section_login{
@@ -268,7 +280,7 @@ footer{
 /* kaban */
 
 #body_kanban{
-    background-color: rgba(0, 0, 0, 30%);
+    background-color: rgba(0, 0, 0, 10%);
 }
 
 #section_kanban{
@@ -291,7 +303,6 @@ footer{
     background-color: transparent;
     text-align: start;
 }
-
 .search-icon {
     position: absolute;
     right: 10px;
@@ -301,15 +312,13 @@ footer{
 nav {
     display: flex;
     align-items: center;
-    
 }
 
 nav a {
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
-    padding-right: 40px;
-    
+    padding-right: 40px; 
 }
 
 
@@ -414,7 +423,6 @@ nav a {
     color: #ffff;
     font-size: 10px;
     border-radius: 50px;
-    
 }
 
 .it {
