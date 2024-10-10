@@ -60,10 +60,7 @@ function mensagemName () {
 
 // salve email no localStorage
 function salveEmail (){
-    if(mensagemEmail == true && mensagemName ==  true){
         let salve =  localStorage.setItem("email", emailInput.value)
-        return salve
-    }
 }
 //salva nome no localStorage
 function salveName(){
