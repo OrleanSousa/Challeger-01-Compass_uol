@@ -38,6 +38,7 @@ function mensagemEmail () {
     }else {
         resultMessage.textContent = "E-mail inválido!"
         resultMessage.style.color = "red"
+        alert("E-mail invalido! Por favor preencha seu e-mail corretamente")
     }
 }
 
@@ -52,6 +53,7 @@ function mensagemName () {
     } else {
         resultMessageName.textContent = "Nome inválido!"
         resultMessageName.style.color = "red"
+        alert("Nome invalido! Por favor preencha seu nome corretamente")
     }
     
 }
