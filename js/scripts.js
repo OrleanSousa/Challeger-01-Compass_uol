@@ -22,10 +22,35 @@ const validaName = (name) =>{
 }
 
 const validPassword = (password)=> {
-    let senha = password.value
-   return senha !== ''
+   return password !== ''
     
 }
+
+formSubscribe.addEventListener("submit", function(event){
+    event.preventDefault()
+    
+    mensagemvalid()
+   
+})
+
+
+
+function salveData(){
+    const email = emailInput.value
+    const isValid = validarEmail(email)
+    const name = nameInput.value
+    const isValidName = validaName(name)
+
+    if(isValid && isValidName){
+        localStorage.setItem("email", emailInput.value)
+        localStorage.setItem("name", nameInput.value)
+        congratulation.textContent = "Congratulation, successful registration!!"
+    }
+    setTimeout(() => {
+        congratulation.textContent = ""
+    },3000)
+}
+
 // valid login
 
 function ValidLogin (){
@@ -50,38 +75,14 @@ loginForm.addEventListener("submit", function(event){
 })
 
 
-formSubscribe.addEventListener("submit", function(event){
-    event.preventDefault()
-    
-    mensagemEmail()
-    mensagemName()
-    salveData()
-})
+function mensagemvalid () {
 
-
-
-function salveData(){
+    //mensagem para avisar se e-mail e valido ou não
     const email = emailInput.value
     const isValid = validarEmail(email)
     const name = nameInput.value
     const isValidName = validaName(name)
 
-    if(isValid && isValidName){
-        localStorage.setItem("email", emailInput.value)
-        localStorage.setItem("name", nameInput.value)
-        congratulation.textContent = "Congratulation, successful registration!!"
-    }
-    setTimeout(() => {
-        congratulation.textContent = ""
-    },3000)
-}
-
-
-function mensagemEmail () {
-
-    //mensagem para avisar se e-mail e valido ou não
-    const email = emailInput.value
-    const isValid = validarEmail(email)
 
     if(isValid) {  
         resultMessage.textContent = "E-mail válido!"
@@ -91,12 +92,6 @@ function mensagemEmail () {
         resultMessage.style.color = "red"
         alert("E-mail invalido! Por favor preencha seu e-mail corretamente")
     }
-}
-
-function mensagemName () {
-    const name = nameInput.value
-    const isValidName = validaName(name)
-
     //mensagem para avisar se nome esta valido
     if(isValidName) {
         resultMessageName.textContent = "Nome válido!"
@@ -106,8 +101,12 @@ function mensagemName () {
         resultMessageName.style.color = "red"
         alert("Nome invalido! Por favor preencha seu nome corretamente")
     }
-    
+
+    if(isValid && isValidName){
+        salveData()
+    }
 }
+
 
 // navigation between pages 
 
