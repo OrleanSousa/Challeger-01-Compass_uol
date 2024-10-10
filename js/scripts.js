@@ -2,9 +2,12 @@ const emailInput = document.getElementById("email")
 const nameInput = document.getElementById("name")
 const resultMessage = document.getElementById("resultMessage")
 const resultMessageName = document.getElementById("resultMessageName")
-const emailForm = document.getElementById("emailForm")
-const subscribe = document.getElementById("subscribe")
+const formSubscribe = document.getElementById("form_subscribe")
+const loginForm = document.getElementById("login_form")
 const congratulation = document.getElementById("congratulation")
+const email2 = document.getElementById("email2")
+const password = document.getElementById("password")
+const badMessagem =  document.getElementById('')
 
 //valida email
 const validarEmail = (email)  =>{
@@ -18,7 +21,7 @@ const validaName = (name) =>{
     return regex.test(name)
 }
 
-emailForm.addEventListener("submit", function(event){
+formSubscribe.addEventListener("submit", function(event){
     event.preventDefault()
     
     mensagemEmail()
@@ -75,10 +78,31 @@ function mensagemName () {
 
 // navigation between pages 
 
-function login(){
+function loginpage(){
     window.location.href = "/login/login.html"
 }
 
+
+function kanbanPage(){
+    window.location.href = "/kanban_page/kanban.html"
+
+}
+// valid login
+
+loginForm.addEventListener("submit", function(event){
+    event.preventDefault()
+
+    const email2 = emailInput.value
+    const isValid = validarEmail(email2)
+    const password = password.value
+    
+    if(isValid && password.value !==""){
+        kanbanPage()
+    }else{
+        badMessagem.textContent = "Invalid email or password"
+    }
+
+})
 
 
 
