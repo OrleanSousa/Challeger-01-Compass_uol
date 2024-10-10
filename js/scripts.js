@@ -26,13 +26,20 @@ const validPassword = (password)=> {
     
 }
 
-formSubscribe.addEventListener("submit", function(event){
-    event.preventDefault()
-    
-    mensagemvalid()
-   
-})
-
+    formSubscribe.addEventListener("submit", function(event){
+      event.preventDefault()
+      
+      mensagemvalid()
+    })
+  
+    loginForm.addEventListener("submit", function(event){
+      event.preventDefault()
+  
+      if (ValidLogin()) {
+        kanbanPage()
+      }
+    })
+  
 
 
 function salveData(){
@@ -52,27 +59,23 @@ function salveData(){
 }
 
 // valid login
-
-function ValidLogin (){
     
-    let emailLogin = email2.value;
-    let isEmailValid = validarEmail(emailLogin);
-    let senha = senhaInput.value;
-    let isSenhaValid = validPassword(senha);
+    function ValidLogin () {
+        let emailLogin = email2.value;
+        let isEmailValid = validarEmail(emailLogin);
+        let senha = senhaInput.value;
+        let isSenhaValid = validPassword(senha);
+      
+        if (isEmailValid && isSenhaValid) {
+          return true
+        } else {
+          alert("Login inválido! Verifique seu email e senha.")
+          return false
+        }
+      }
 
-    if (isEmailValid && isSenhaValid) {
-        kanbanPage();
-    } else {
-        alert("Login inválido! Verifique seu email e senha.");
-    }
 
-}
 
-loginForm.addEventListener("submit", function(event){
-    event.preventDefault()
-
-    ValidLogin()
-})
 
 
 function mensagemvalid () {
