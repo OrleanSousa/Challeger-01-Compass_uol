@@ -21,12 +21,34 @@ const validaName = (name) =>{
     return regex.test(name)
 }
 
-const validPassword = (passwsenhaord)=> {
-    let senha = passwsenhaord.value
-    
+const validPassword = (password)=> {
+    let senha = password.value
    return senha !== ''
     
 }
+// valid login
+
+function ValidLogin (){
+    
+    let emailLogin = email2.value;
+    let isEmailValid = validarEmail(emailLogin);
+    let senha = senhaInput.value;
+    let isSenhaValid = validPassword(senha);
+
+    if (isEmailValid && isSenhaValid) {
+        kanbanPage();
+    } else {
+        alert("Login inválido! Verifique seu email e senha.");
+    }
+
+}
+
+loginForm.addEventListener("submit", function(event){
+    event.preventDefault()
+
+    ValidLogin()
+})
+
 
 formSubscribe.addEventListener("submit", function(event){
     event.preventDefault()
@@ -35,6 +57,8 @@ formSubscribe.addEventListener("submit", function(event){
     mensagemName()
     salveData()
 })
+
+
 
 function salveData(){
     const email = emailInput.value
@@ -45,7 +69,7 @@ function salveData(){
     if(isValid && isValidName){
         localStorage.setItem("email", emailInput.value)
         localStorage.setItem("name", nameInput.value)
-        congratulation.textContent = "Congratulation, ssuccessful registration!!"
+        congratulation.textContent = "Congratulation, successful registration!!"
     }
     setTimeout(() => {
         congratulation.textContent = ""
@@ -96,25 +120,9 @@ function kanbanPage(){
     window.location.href = "/kanban_page/kanban.html"
 
 }
-// valid login
 
-function ValidLogin (){
-    
-    let emailLogin = email2.value;
-    let isEmailValid = validarEmail(emailLogin);
-    let senha = senhaInput.value;
-    let isSenhaValid = validPassword(senha);
-
-    if (isEmailValid && isSenhaValid) {
-        kanbanPage();
-    } else {
-        alert("Login inválido! Verifique seu email e senha.");
-    }
-
+function home(){
+    window.location.href = "../index.html"
 }
 
-loginForm.addEventListener("submit", function(event){
-    event.preventDefault()
 
-    ValidLogin()
-})
