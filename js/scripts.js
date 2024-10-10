@@ -6,7 +6,7 @@ const formSubscribe = document.getElementById("form_subscribe")
 const loginForm = document.getElementById("login_form")
 const congratulation = document.getElementById("congratulation")
 const email2 = document.getElementById("email2")
-const password = document.getElementById("password")
+const senhaInput = document.getElementById("password")
 
 
 //valida email
@@ -20,13 +20,11 @@ const validaName = (name) =>{
     const regex = /^[A-Za-z]+(\s[A-Za-z]+)*$/
     return regex.test(name)
 }
-const validPassword = (password)=> {
-    let senha = password.value
-    if(senha !== ""){
-        return true
-    }else{
-        return false
-    }
+
+const validPassword = (passwsenhaord)=> {
+    let senha = passwsenhaord.value
+    
+   return senha !== ''
     
 }
 
@@ -36,7 +34,6 @@ formSubscribe.addEventListener("submit", function(event){
     mensagemEmail()
     mensagemName()
     salveData()
-    
 })
 
 function salveData(){
@@ -44,6 +41,7 @@ function salveData(){
     const isValid = validarEmail(email)
     const name = nameInput.value
     const isValidName = validaName(name)
+
     if(isValid && isValidName){
         localStorage.setItem("email", emailInput.value)
         localStorage.setItem("name", nameInput.value)
@@ -60,6 +58,7 @@ function mensagemEmail () {
     //mensagem para avisar se e-mail e valido ou não
     const email = emailInput.value
     const isValid = validarEmail(email)
+
     if(isValid) {  
         resultMessage.textContent = "E-mail válido!"
         resultMessage.style.color = "green"
@@ -73,6 +72,7 @@ function mensagemEmail () {
 function mensagemName () {
     const name = nameInput.value
     const isValidName = validaName(name)
+
     //mensagem para avisar se nome esta valido
     if(isValidName) {
         resultMessageName.textContent = "Nome válido!"
@@ -99,14 +99,22 @@ function kanbanPage(){
 // valid login
 
 function ValidLogin (){
-    let emailLogin = email2.value
-    emailLogin = validarEmail(emailLogin)
-    let senha = password.value
-    senha =  validPassword(senha)
     
-    if(emailLogin && senha){
-        kanbanPage()
-    }   
+    let emailLogin = email2.value;
+    let isEmailValid = validarEmail(emailLogin);
+    let senha = senhaInput.value;
+    let isSenhaValid = validPassword(senha);
+
+    if (isEmailValid && isSenhaValid) {
+        kanbanPage();
+    } else {
+        alert("Login inválido! Verifique seu email e senha.");
+    }
 
 }
 
+loginForm.addEventListener("submit", function(event){
+    event.preventDefault()
+
+    ValidLogin()
+})
