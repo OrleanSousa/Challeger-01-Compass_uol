@@ -22,9 +22,21 @@ emailForm.addEventListener("submit", function(event){
 
     mensagemEmail()
     mensagemName()
-    
+    salveData()
     
 })
+
+function salveData(){
+    const email = emailInput.value
+    const isValid = validarEmail(email)
+    const name = nameInput.value
+    const isValidName = validaName(name)
+    if(isValid && isValidName){
+        localStorage.setItem("email", emailInput.value)
+        localStorage.setItem("name", nameInput.value)
+    }
+}
+
 
 function mensagemEmail () {
 
@@ -34,7 +46,6 @@ function mensagemEmail () {
     if(isValid) {  
         resultMessage.textContent = "E-mail válido!"
         resultMessage.style.color = "green"
-        salveEmail()
     }else {
         resultMessage.textContent = "E-mail inválido!"
         resultMessage.style.color = "red"
@@ -49,7 +60,6 @@ function mensagemName () {
     if(isValidName) {
         resultMessageName.textContent = "Nome válido!"
         resultMessageName.style.color = "green"
-        salveName()
     } else {
         resultMessageName.textContent = "Nome inválido!"
         resultMessageName.style.color = "red"
@@ -58,12 +68,18 @@ function mensagemName () {
     
 }
 
-// salve email no localStorage
-function salveEmail (){
-        let salve =  localStorage.setItem("email", emailInput.value)
-}
-//salva nome no localStorage
-function salveName(){
-    localStorage.setItem("name", nameInput.value)
-}
+
+// // salve email no localStorage
+// function salveEmail (){
+
+      
+       
+// }
+// //salva nome no localStorage
+// function salveName(){
+  
+    
+// }
+
+
 
