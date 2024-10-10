@@ -7,7 +7,7 @@ const loginForm = document.getElementById("login_form")
 const congratulation = document.getElementById("congratulation")
 const email2 = document.getElementById("email2")
 const password = document.getElementById("password")
-const badMessagem =  document.getElementById('')
+
 
 //valida email
 const validarEmail = (email)  =>{
@@ -19,6 +19,15 @@ const validarEmail = (email)  =>{
 const validaName = (name) =>{
     const regex = /^[A-Za-z]+(\s[A-Za-z]+)*$/
     return regex.test(name)
+}
+const validPassword = (password)=> {
+    let senha = password.value
+    if(senha !== ""){
+        return true
+    }else{
+        return false
+    }
+    
 }
 
 formSubscribe.addEventListener("submit", function(event){
@@ -89,21 +98,15 @@ function kanbanPage(){
 }
 // valid login
 
-loginForm.addEventListener("submit", function(event){
-    event.preventDefault()
-
-    const email2 = emailInput.value
-    const isValid = validarEmail(email2)
-    const password = password.value
+function ValidLogin (){
+    let emailLogin = email2.value
+    emailLogin = validarEmail(emailLogin)
+    let senha = password.value
+    senha =  validPassword(senha)
     
-    if(isValid && password.value !==""){
+    if(emailLogin && senha){
         kanbanPage()
-    }else{
-        badMessagem.textContent = "Invalid email or password"
-    }
+    }   
 
-})
-
-
-
+}
 
