@@ -4,6 +4,7 @@ const resultMessage = document.getElementById("resultMessage")
 const resultMessageName = document.getElementById("resultMessageName")
 const emailForm = document.getElementById("emailForm")
 const subscribe = document.getElementById("subscribe")
+const congratulation = document.getElementById("congratulation")
 
 //valida email
 const validarEmail = (email)  =>{
@@ -19,7 +20,7 @@ const validaName = (name) =>{
 
 emailForm.addEventListener("submit", function(event){
     event.preventDefault()
-
+    
     mensagemEmail()
     mensagemName()
     salveData()
@@ -34,7 +35,11 @@ function salveData(){
     if(isValid && isValidName){
         localStorage.setItem("email", emailInput.value)
         localStorage.setItem("name", nameInput.value)
+        congratulation.textContent = "Congratulation, ssuccessful registration!!"
     }
+    setTimeout(() => {
+        congratulation.textContent = ""
+    },3000)
 }
 
 
@@ -69,17 +74,6 @@ function mensagemName () {
 }
 
 
-// // salve email no localStorage
-// function salveEmail (){
-
-      
-       
-// }
-// //salva nome no localStorage
-// function salveName(){
-  
-    
-// }
 
 
 
