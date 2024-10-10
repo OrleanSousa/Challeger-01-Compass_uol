@@ -20,7 +20,7 @@ header{
     flex-grow: 1;
     margin-left: 20px;
 }
-#Button-loguin{
+.Button-loguin{
     width: 240px;
     height: 48px;
     background-color: #CB4F57;
@@ -66,16 +66,6 @@ main img{
     line-height: 30px;
     font-weight: 200;
     font-size: 18px;
-}
-.container_text button{
-    width: 240px;
-    height: 48px;
-    background-color: #CB4F57;
-    color: #FCF4B6;
-    gap: 24px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
 }
 .section_2 {
     display: flex;
@@ -211,7 +201,7 @@ form{
     gap: 4px;
     
 }
-#email, #name, #password{
+#email, #name, #password, #email2{
     height: 36px;
     border-radius: 10px;
     border: solid 1px #000;

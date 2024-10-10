@@ -73,6 +73,12 @@ function mensagemName () {
     
 }
 
+// navigation between pages 
+
+function login(){
+    window.location.href = "/login/login.html"
+}
+
 
 
 
