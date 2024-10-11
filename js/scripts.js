@@ -5,13 +5,13 @@ const resultMessageName = document.getElementById("resultMessageName")
 const formSubscribe = document.getElementById("form_subscribe")
 const congratulation = document.getElementById("congratulation")
 
-//valida email
+//validate email
 const validarEmail = (email)  =>{
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
 } // aqui ta ok ( o validador )
 
-//valida nome
+//validate name
 const validaName = (name) =>{
     const regex = /^[A-Za-z]+(\s[A-Za-z]+)*$/
     return regex.test(name)
@@ -26,7 +26,7 @@ formSubscribe.addEventListener("submit", function (event){
 
 function mensagemvalid () {
 
-    //mensagem para avisar se e-mail e valido ou não
+    //message to let you know whether the email is valid or not
     const email = emailInput.value
     const isValid = validarEmail(email)
     const name = nameInput.value
@@ -41,7 +41,7 @@ function mensagemvalid () {
         resultMessage.style.color = "red"
         alert("E-mail invalido! Por favor preencha seu e-mail corretamente")
     }
-    //mensagem para avisar se nome esta valido
+    //message to notify if name is valid
     if(isValidName) {
         resultMessageName.textContent = "Nome válido!"
         resultMessageName.style.color = "green"
@@ -55,6 +55,8 @@ function mensagemvalid () {
         salveData()
     }
 }
+
+// save files to localStorage
 
 function salveData(){
     const email = emailInput.value
