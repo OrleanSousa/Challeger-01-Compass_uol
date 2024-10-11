@@ -194,7 +194,7 @@ form{
 .subscribe{
     margin-top: 40px;
 }
-#form_subscribe, #form_login form{
+#form_subscribe, #login_form{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

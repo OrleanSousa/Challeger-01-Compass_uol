@@ -5,8 +5,7 @@ const resultMessageName = document.getElementById("resultMessageName")
 const formSubscribe = document.getElementById("form_subscribe")
 const loginForm = document.getElementById("login_form")
 const congratulation = document.getElementById("congratulation")
-const email2 = document.getElementById("email2")
-const senhaInput = document.getElementById("password")
+
 
 
 //valida email
@@ -21,61 +20,11 @@ const validaName = (name) =>{
     return regex.test(name)
 }
 
-const validPassword = (password)=> {
-   return password !== ''
-    
-}
 
-    formSubscribe.addEventListener("submit", function(event){
-      event.preventDefault()
-      
-      mensagemvalid()
-    })
-  
-    loginForm.addEventListener("submit", function(event){
-      event.preventDefault()
-  
-      if (ValidLogin()) {
-        kanbanPage()
-      }
-    })
-  
-
-
-function salveData(){
-    const email = emailInput.value
-    const isValid = validarEmail(email)
-    const name = nameInput.value
-    const isValidName = validaName(name)
-
-    if(isValid && isValidName){
-        localStorage.setItem("email", emailInput.value)
-        localStorage.setItem("name", nameInput.value)
-        congratulation.textContent = "Congratulation, successful registration!!"
-    }
-    setTimeout(() => {
-        congratulation.textContent = ""
-    },3000)
-}
-
-// valid login
-    
-    function ValidLogin () {
-        let emailLogin = email2.value;
-        let isEmailValid = validarEmail(emailLogin);
-        let senha = senhaInput.value;
-        let isSenhaValid = validPassword(senha);
-      
-        if (isEmailValid && isSenhaValid) {
-          return true
-        } else {
-          alert("Login inválido! Verifique seu email e senha.")
-          return false
-        }
-      }
-
-
-
+formSubscribe.addEventListener("submit", function (event){
+    event.preventDefault()
+    mensagemvalid()
+})
 
 
 function mensagemvalid () {
@@ -110,6 +59,22 @@ function mensagemvalid () {
     }
 }
 
+function salveData(){
+    const email = emailInput.value
+    const isValid = validarEmail(email)
+    const name = nameInput.value
+    const isValidName = validaName(name)
+
+    if(isValid && isValidName){
+        localStorage.setItem("email", emailInput.value)
+        localStorage.setItem("name", nameInput.value)
+        congratulation.textContent = "Congratulation, successful registration!!"
+    }
+    setTimeout(() => {
+        congratulation.textContent = ""
+    },3000)
+}
+
 
 // navigation between pages 
 
@@ -118,13 +83,6 @@ function loginpage(){
 }
 
 
-function kanbanPage(){
-    window.location.href = "/kanban_page/kanban.html"
 
-}
-
-function home(){
-    window.location.href = "../index.html"
-}
 
 
