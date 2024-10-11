@@ -3,10 +3,7 @@ const nameInput = document.getElementById("name")
 const resultMessage = document.getElementById("resultMessage")
 const resultMessageName = document.getElementById("resultMessageName")
 const formSubscribe = document.getElementById("form_subscribe")
-const loginForm = document.getElementById("login_form")
 const congratulation = document.getElementById("congratulation")
-
-
 
 //valida email
 const validarEmail = (email)  =>{
@@ -73,13 +70,6 @@ function salveData(){
     setTimeout(() => {
         congratulation.textContent = ""
     },3000)
-}
-
-
-// navigation between pages 
-
-function loginpage(){
-    window.location.href = "/login/login.html"
 }
 
 
