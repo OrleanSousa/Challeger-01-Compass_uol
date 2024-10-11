@@ -226,6 +226,7 @@ form{
 /* footer */
 footer {
     justify-content: space-evenly;
+    padding: 60px;
 }
 .text_footer{
     display: flex;
