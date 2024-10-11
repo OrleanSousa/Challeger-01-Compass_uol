@@ -20,6 +20,7 @@ header{
     flex-grow: 1;
     margin-left: 20px;
 }
+
 .Button-loguin{
     width: 240px;
     height: 48px;
@@ -31,6 +32,7 @@ header{
     border: none;
     cursor: pointer;
 }
+
 main {
     background-color: #7A1745;
     display: flex;   
@@ -240,6 +242,10 @@ footer{
 
 
 /* login */
+
+#body_login{
+    overflow: hidden;
+}
 
 #main_login {  
     justify-content: space-between ;
