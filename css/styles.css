@@ -25,7 +25,7 @@ header, footer {
     border-radius: 10px;
     border: none;
     font-weight: bold;
-    transition: all 0.5s;
+    transition: all 0.8s;
     cursor: pointer;
 }
 
@@ -404,5 +404,5 @@ nav a {
 
 .Button-loguin:hover, .buttons_same:hover{
     -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
