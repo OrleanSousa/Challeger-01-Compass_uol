@@ -25,6 +25,7 @@ header, footer {
     border-radius: 10px;
     border: none;
     font-weight: bold;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
@@ -232,6 +233,7 @@ footer {
     display: flex;
     color: #FFFFFF;
     gap: 50px;
+    
 }
 
 /* login */
@@ -396,4 +398,11 @@ nav a {
 }
 .gm {
     background-color: #AF4A00;
+}
+
+/* button and image hover effects  */
+
+.Button-loguin:hover, .buttons_same:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
